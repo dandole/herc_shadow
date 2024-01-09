@@ -10,9 +10,9 @@ for file in "${@:1}"; do
 			else
 				backup="$file".bak
 				cmd="mv $file $backup"
-				echo "$cmd"
+				eval "$cmd"
 				cmd="ckd2cckd64 -q $backup $file"
-				echo "$cmd"
+				eval "$cmd"
 			fi
 		else
 			echo "     $file" not a DASD.
