@@ -1,9 +1,9 @@
 # Change to point to your Hercules sockdev printer
+# Change to point to your Hercules sockdev printer
 hercules_address: "127.0.0.1:1403"
 
 mode: "local"
 profile: "default-green"
-service_address: "https://1403.bitnet.systems/print"
-access_key: ""
 
 output_directory: "printers/PRT_00E_CLASS_A"
+
