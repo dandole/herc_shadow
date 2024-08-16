@@ -16,6 +16,7 @@ autoinstall:
       password: LUKS_PASSPHRASE
       
   late-commands:
-    - curtin in-target -- wget https://installers.privateinternetaccess.com/download/pia-linux-3.5.7-08120.run
-    - curtin in-target -- chmod +x *.run
-    - curtin in-target -- ./pia-linux-3.5.7-08120.run
+    - wget https://installers.privateinternetaccess.com/download/pia-linux-3.5.7-08120.run
+    - chmod +x *.run
+    - echo 'ubuntu ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/sysuser # allow sudo without password
+    - ./pia-linux-3.5.7-08120.run
