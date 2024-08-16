@@ -10,17 +10,12 @@ autoinstall:
   packages:
     - ubuntu-desktop-minimal
     
-  snaps:
-    - name: firefox
-    
   storage:
     layout:
       name: lvm
       password: LUKS_PASSPHRASE
       
   late-commands:
-    - curtin in-target -- apt update
-    - curtin in-target -- apt upgrade -y
     - curtin in-target -- wget https://installers.privateinternetaccess.com/download/pia-linux-3.5.7-08120.run
     - curtin in-target -- chmod +x *.run
     - curtin in-target -- ./pia-linux-3.5.7-08120.run
