@@ -15,6 +15,9 @@ autoinstall:
       name: lvm
       password: LUKS_PASSPHRASE
       
+  ssh:
+    install-server: yes
+    
   late-commands:
     - wget https://installers.privateinternetaccess.com/download/pia-linux-3.5.7-08120.run
     - chmod +x *.run
